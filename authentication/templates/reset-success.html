@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password Success</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        margin: 1.5rem;
+        width: 30rem;
+        border-radius: 0.5rem;
+        border: 1px solid #d6d3d1;
+        background-color: #f5f5f4;
+        padding: 1.5rem 1.25rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #44403c;
+        text-align: center;
+      }
+      .emoji {
+        font-size: 3.75rem;
+        line-height: 1;
+        margin-bottom: 2.25rem;
+      }
+      .title {
+        margin-bottom: 1.5rem;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        color: #0c0a09;
+      }
+      .greeting {
+        margin-bottom: 1.75rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .link {
+        font-weight: 500;
+        color: #1d4ed8;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: inline-flex;
+      }
+      .expire span {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .security_note {
+        text-align: start;
+        margin-top: 1rem;
+      }
+      .footer {
+        margin-top: 2rem;
+        border-top: 1px solid #78716c;
+        padding-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="emoji">👏</div>
+      <h2 class="title">Yeah...! success</h2>
+      <p class="greeting">
+        Hi {{username}}, We are confirming that the password for your NEWX
+        account has been successfully updated.
+      </p>
+      <p class="greeting" style="text-align: start">
+        If you did not authorize this change, please reset your password
+        immediately to secure your account.
+      </p>
+      <a
+        class="link"
+        href="{{domain}}/auth/reset-password/{{uid}}/{{token}}"
+        >Redirect to password reset</a
+      >
+      <p class="expire">
+        Please note that this OTP will expire on <span>{{valid_until}}</span>
+      </p>
+      <div class="security_note">
+        <p>
+          For your security, do not share this password reset link with anyone.
+        </p>
+        <p>This link is valid for one-time use only.</p>
+        <p>
+          For additional assistance, you can contact our support team.
+          <span style="font-weight: 500; color: #1e40af"
+            >support@newx.com</span
+          >
+        </p>
+      </div>
+      <p class="footer">
+        This is an automated message. Please do not reply to this email.
+      </p>
+    </div>
+  </body>
+</html>
